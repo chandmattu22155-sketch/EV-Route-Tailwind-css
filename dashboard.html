@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV Route Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body class="bg-gradient-to-br from-[#061B3A] to-[#031026] text-white min-h-screen flex flex-col">
+
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('-translate-x-full');
+}
+</script>
+
+<header class="md:hidden flex items-center justify-between p-4 bg-slate-800">
+  <h1 class="text-lg font-bold flex items-center gap-2">
+    <i class="fa-solid fa-bolt text-emerald-400"></i> EV Route
+  </h1>
+  <button onclick="toggleSidebar()" class="text-white text-2xl">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</header>
+
+<div class="flex flex-1 overflow-hidden">
+
+  
+  <aside id="sidebar"
+    class="fixed md:static inset-y-0 left-0 z-50 w-64 bg-slate-800 flex flex-col justify-between p-6 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+    
+    <div>
+      <h1 class="text-xl font-bold flex items-center gap-2 mb-8">
+        <i class="fa-solid fa-bolt text-emerald-400"></i> EV Route
+      </h1>
+
+      <nav class="space-y-3">
+        <a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-blue-300/40">
+          <i class="fa-solid fa-gauge"></i> Dashboard
+        </a>
+        <a class="flex items-center gap-3 px-4 py-2 hover:bg-white/10 rounded-lg">
+          <i class="fa-solid fa-map"></i> Live Map
+        </a>
+        <a class="flex items-center gap-3 px-4 py-2 hover:bg-white/10 rounded-lg">
+          <i class="fa-solid fa-route"></i> Trip Planner
+        </a>
+       <a href="garage.html" class="flex items-center gap-3 px-4 py-2 hover:bg-white/10 rounded-lg">
+        <i class="fa-solid fa-car"></i> My Vehicles
+          </a>
+
+        <a class="flex items-center gap-3 px-4 py-2 hover:bg-white/10 rounded-lg">
+          <i class="fa-solid fa-gear"></i> Settings
+        </a>
+      </nav>
+    </div>
+
+    <div class="border-t border-blue-500/30 pt-4 flex items-center gap-3">
+      <img src="/images/dashboard.webp" class="w-12 h-12 rounded-full"/>
+      <div>
+        <p class="text-sm font-medium">Sarah Connor</p>
+        <p class="text-xs text-gray-400">s.connor@email.com</p>
+      </div>
+    </div>
+  </aside>
+
+  <main class="flex-1 overflow-auto p-4 md:p-8 space-y-8">
+
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+      <h2 class="text-3xl font-bold">Good morning, Sarah</h2>
+      <div class="flex flex-wrap gap-3">
+        <button class="bg-emerald-500 hover:bg-emerald-600 font-bold px-4 py-2 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-plus"></i> Plan a New Trip
+        </button>
+        <button class="bg-white/10 hover:bg-slate-600 px-4 py-2 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-plug"></i> Find a Charger
+        </button>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="text-xl font-bold">My Vehicle</div>
+      <div class="bg-slate-800 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-center md:items-start">
+        <div class="flex-1">
+          <h3 class="text-xl font-semibold mb-4">My Tesla Model 3</h3>
+          <div class="flex items-center gap-4 mb-3">
+            <i class="fa-solid fa-battery-three-quarters text-emerald-400"></i>
+            <div class="w-full bg-white/10 h-2 rounded-full">
+              <div class="bg-emerald-400 h-2 w-[75%] rounded-full"></div>
+            </div>
+            <span class="text-sm">75%</span>
+          </div>
+          <p class="text-sm text-gray-300 mb-4">Estimated Range: 250 miles</p>
+          <button class="border border-white/20 px-4 py-2 rounded-lg hover:bg-white/10">
+            Change Vehicle
+          </button>
+        </div>
+        <img src="/images/dashboard2.webp" class="w-full md:w-56 rounded-xl object-cover"/>
+      </div>
+    </div>
+
+    <div class="space-y-2">
+      <div class="font-bold text-xl">Nearby Charges</div>
+      <div class="bg-white/10 rounded-2xl overflow-hidden h-[350px] md:h-[450px]">
+        <iframe src="https://maps.google.com/maps?q=san%20francisco&t=&z=12&ie=UTF8&iwloc=&output=embed"
+          class="w-full h-full border-0"></iframe>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <h3 class="text-xl font-semibold mb-2">Recent Trips</h3>
+      <div class="space-y-2">
+        
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-slate-800 p-4 rounded-xl border border-slate-600">
+          <div class="flex items-center gap-3 mb-3 md:mb-0">
+            <div class="w-14 h-14 bg-blue-900 rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-briefcase text-green-600 text-xl"></i>
+            </div>
+            <div>
+              <p class="font-medium">Home to Office</p>
+              <p class="text-sm text-gray-400">May 20, 2024 • 15.2 miles</p>
+            </div>
+          </div>
+          <button class="border border-slate-400 px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-slate-500 transition">
+            <i class="fa-solid fa-repeat"></i> Repeat Trip
+          </button>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-slate-800 p-4 rounded-xl border border-slate-600">
+          <div class="flex items-center gap-3 mb-3 md:mb-0">
+            <div class="w-14 h-14 bg-blue-900 rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-cart-shopping text-green-600 text-xl"></i>
+            </div>
+            <div>
+              <p class="font-medium">Trip to Downtown Mall</p>
+              <p class="text-sm text-gray-400">May 18, 2024 • 22.8 miles</p>
+            </div>
+          </div>
+          <button class="border border-slate-400 px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-slate-500 transition">
+            <i class="fa-solid fa-repeat"></i> Repeat Trip
+          </button>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-slate-800 p-4 rounded-xl border border-slate-600">
+          <div class="flex items-center gap-3 mb-3 md:mb-0">
+            <div class="w-14 h-14 bg-blue-900 rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-person-hiking text-green-600 text-xl"></i>
+            </div>
+            <div>
+              <p class="font-medium">Lakeview Park Weekend</p>
+              <p class="text-sm text-gray-400">May 12, 2024 • 64.1 miles</p>
+            </div>
+          </div>
+          <button class="border border-slate-400 px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-slate-500 transition">
+            <i class="fa-solid fa-repeat"></i> Repeat Trip
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

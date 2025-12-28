@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Route</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-white font-sans">
+
+<header class="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between">
+
+  <span class="font-semibold text-lg ml-6">EV Route</span>
+
+  <nav class="hidden md:flex gap-8 text-slate-300">
+    <a href="#" class="hover:text-white">Features</a>
+    <a href="#" class="hover:text-white">About</a>
+    <a href="#" class="hover:text-white">FAQ</a>
+  </nav>
+
+  <div class="hidden md:flex gap-3">
+    <a href="Signup.html" class="bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded-lg">Sign Up</a>
+    <a href="login.html" class="bg-slate-500 hover:bg-slate-700 px-4 py-2 rounded-lg">Log In</a>
+  </div>
+
+  <button onclick="toggleMenu()" class="md:hidden text-2xl">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</header>
+
+<div id="mobileMenu" class="hidden md:hidden bg-slate-800 px-4 py-4 space-y-4">
+  <a href="#" class="block">Features</a>
+  <a href="#" class="block">About</a>
+  <a href="#" class="block">FAQ</a>
+  <div class="flex gap-3 pt-4">
+    <a href="Signup.html" class="bg-blue-500 px-4 py-2 rounded-lg">Sign Up</a>
+    <a href="login.html" class="bg-slate-500 px-4 py-2 rounded-lg">Log In</a>
+  </div>
+</div>
+   <script>
+     function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+      }
+   </script>
+
+
+      <section class="max-w-6xl mx-auto px-8">
+  <div class="relative rounded-2xl overflow-hidden">
+
+    <img
+      src="images/landingimage.webp"
+      class="w-full h-[260px] sm:h-[350px] md:h-[500px] object-cover"
+    />
+
+    <div class="absolute inset-0 bg-black/60 flex items-center justify-center px-4">
+      <div class="text-center max-w-3xl">
+        <h1 class="text-xl sm:text-3xl md:text-5xl font-bold leading-tight">
+          Effortless EV Journeys, Planned for You.
+        </h1>
+
+        <p class="mt-4 text-slate-200 text-sm sm:text-base">
+          Discover thousands of charging stations and plan your route with confidence.
+          Never worry about range again.
+        </p>
+
+        <button class="mt-6 bg-blue-500 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold">
+          Plan Your First Trip
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="max-w-7xl mx-auto px-24 py-20">
+  <h2 class="text-center text-2xl font-bold mb-3">Why Choose EV Route?</h2>
+  <p class="text-center text-slate-400 mb-12">
+    Our intelligent platform provides all the tools to make your electric journey seamless.
+  </p>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="bg-slate-800 p-6 rounded-xl">
+     <i class="fa-solid fa-map text-blue-500 mb-3"></i>
+      <h3 class="font-semibold mb-2">Comprehensive Station Map</h3>
+      <p class="text-slate-400 text-sm">
+        Access a vast network of charging stations across the country.
+      </p>
+    </div>
+
+    <div class="bg-slate-800 p-6 rounded-xl">
+      <i class="fa-solid fa-route text-blue-500 mb-3"></i>
+      <h3 class="font-semibold mb-2">Intelligent Route Planning</h3>
+      <p class="text-slate-400 text-sm">
+        Smart algorithms plan the most efficient route with charging stops.
+      </p>
+    </div>
+
+    <div class="bg-slate-800 p-6 rounded-xl">
+      <i class="fa-regular fa-clock text-blue-500 mb-3"></i>
+      <h3 class="font-semibold mb-2">Real-time Availability</h3>
+      <p class="text-slate-400 text-sm">
+        Check charger availability in real time to avoid waiting.
+      </p>
+    </div>
+
+    <div class="bg-slate-800 p-6 rounded-xl">
+      <i class="fa-brands fa-rev text-blue-500 mb-3"></i>
+      <h3 class="font-semibold mb-2">Community Reviews</h3>
+      <p class="text-slate-400 text-sm">
+        Read reviews from other EV drivers to find the best stations.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-20 pb-20">
+  <h2 class="text-center text-2xl font-bold mb-12">
+    Get Started in Three Easy Steps
+  </h2>
+
+  <div class="grid gap-10 md:grid-cols-3 text-center">
+    <div>
+      <div class="mx-auto w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center mb-4">
+         <i class="fa-solid fa-location-dot text-blue-600 text-xl"></i>
+      </div>
+      <h3 class="font-semibold">1.Enter Destination</h3>
+      <p class="text-slate-300 text-sm  mt-2">
+        Tell us where you're going, and we'll handle the rest.
+      </p>
+    </div>
+
+    <div>
+      <div class="mx-auto w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center mb-4">
+         <i class="fa-solid fa-charging-station text-blue-600 text-xl"></i>
+      </div>
+      <h3 class="font-semibold">2.Find Chargers</h3>
+      <p class="text-slate-300 text-sm mt-2">
+        We'll find the best charging stops along your route.
+      </p>
+    </div>
+
+    <div>
+      <div class="mx-auto w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center mb-4">
+        <i class="fa-solid fa-car text-blue-600 text-xl"></i>
+      </div>
+      <h3 class="font-semibold">3.Drive Confidently</h3>
+      <p class="text-slate-300 text-sm mt-2">
+        Enjoy your trip with complete peace of mind.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+ <section class="max-w-7xl mx-auto px-24 pb-20 ">
+  <h2 class="text-center text-2xl font-bold mb-10">
+    Don't just take our word for it.
+  </h2>
+
+  <div class="grid gap-6 md:grid-cols-3">
+
+  <div class="bg-slate-800 p-4 rounded-xl">
+  <div class="flex items-center mb-4">
+    <img src="/images/photo1.avif" alt="photo"class="w-12 h-12 rounded-full mr-3 object-cover">
+    <div>
+      <span class="block font-semibold text-white">Sarah K.</span>
+      <span class="text-xs text-slate-400">EV Enthusiast</span>
+    </div>
+  </div>
+  <p class="text-sm text-slate-300 ">
+    “As a new EV owner, this took away all my range anxiety.”
+  </p>
+</div> 
+
+  <div class="bg-slate-800 p-4 rounded-xl">
+  <div class="flex items-center mb-4">
+    <img src="/images/photo2.webp" alt="photo"class="w-12 h-12 rounded-full mr-3 object-cover">
+    <div>
+      <span class="block font-semibold text-white">Milk T.</span>
+      <span class="text-xs text-slate-400">Daily Commuter</span>
+    </div>
+  </div>
+  <p class="text-sm text-slate-300 ">
+    “As a new EV owner, this took away all my range anxiety.”
+  </p>
+</div> 
+   
+  <div class="bg-slate-800 p-4 rounded-xl">
+  <div class="flex items-center mb-4">
+    <img src="/images/photo3.webp" alt="photo"class="w-12 h-12 rounded-full mr-3 object-cover">
+    <div>
+      <span class="block font-semibold text-white">Jessica L.</span>
+      <span class="text-xs text-slate-400">New EV Owner</span>
+    </div>
+  </div>
+  <p class="text-sm text-slate-300 ">
+    “As a new EV owner, this took away all my range anxiety.”
+  </p>
+</div> 
+
+
+  </div>
+</section>
+
+
+<footer class="border-t border-white-800 py-6 text-start text-white text-sm mx-16 font-semibold flex justify-between items-center">
+  <span>© 2024 EV Route. All rights reserved.</span>
+  <div class="flex gap-6 text-white/80 font-normal">
+    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+    <a href="#" class="hover:text-white transition">Terms of Service</a>
+    <a href="#" class="hover:text-white transition">Contact</a>
+  </div>
+</footer>
+
+      
+</body>
+</html>

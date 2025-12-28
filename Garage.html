@@ -1,0 +1,145 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Garage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-slate-900 text-white font-sans">
+
+<div class="flex min-h-screen relative">
+
+  <div id="overlay"
+       class="fixed inset-0 bg-black/50 hidden z-40 lg:hidden"
+       onclick="toggleSidebar()"></div>
+
+  <aside id="sidebar"
+    class="fixed lg:static inset-y-0 left-0 z-50
+           w-64 bg-slate-800 p-6 flex flex-col
+           transform -translate-x-full lg:translate-x-0
+           transition-transform duration-300">
+
+    <div class="flex items-center mb-10">
+      <img src="/images/OIP (2).webp" class="rounded-full w-10 h-10 mr-3">
+      <div>
+        <p class="font-semibold">Alex Johnson</p>
+        <p class="text-slate-400 text-sm">alex.j@email.com</p>
+      </div>
+    </div>
+
+    <nav class="flex flex-col gap-4 flex-1">
+  <a href="dashboard.html" class="hover:text-blue-400  flex items-center gap-2">
+    <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+  </a>
+      <a href="#" class="flex items-center gap-3 hover:text-blue-400">
+        <i class="fa-solid fa-map"></i> Map
+      </a>
+      <a href="#" class="flex items-center gap-3 text-blue-400">
+        <i class="fa-solid fa-car"></i> My Garage
+      </a>
+      <a href="#" class="flex items-center gap-3 hover:text-blue-400">
+        <i class="fa-solid fa-route"></i> Trip Planner
+      </a>
+      <a href="#" class="flex items-center gap-3 hover:text-blue-400">
+        <i class="fa-solid fa-gear"></i> Settings
+      </a>
+    </nav>
+
+    <a href="#" class="mt-auto flex items-center gap-3 hover:text-red-500">
+      <i class="fa-solid fa-right-from-bracket"></i> Log Out
+    </a>
+  </aside>
+
+  
+  <main class="flex-1 p-4 sm:p-6 md:p-10 w-full">
+
+    
+    <div class="flex items-center gap-4 mb-6 lg:hidden">
+      <button onclick="toggleSidebar()"
+        class="bg-slate-800 p-3 rounded-xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <h1 class="text-xl font-bold">My Garage</h1>
+    </div>
+
+    <h1 class="hidden lg:block text-2xl md:text-3xl font-bold mb-2">
+      Add Your Vehicle
+    </h1>
+
+    <p class="text-slate-300 mb-6 text-sm md:text-base">
+      Select your vehicle's make and model to automatically add its details.
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-4 mb-10">
+      <select class="bg-slate-800 border border-slate-700 rounded-lg p-3 w-full">
+        <option>Tesla</option>
+        <option>BMW</option>
+        <option>Audi</option>
+      </select>
+
+      <select class="bg-slate-800 border border-slate-700 rounded-lg p-3 w-full">
+        <option>Model 3</option>
+        <option>Model 4</option>
+        <option>Model 5</option>
+      </select>
+    </div>
+
+    <div class="bg-slate-800 rounded-2xl p-6 flex flex-col items-center">
+      <img src="/images/maxresdefault.jpg"
+           class="w-48 sm:w-56 md:w-64 mb-6 rounded-xl">
+
+      <h2 class="text-lg md:text-xl font-semibold mb-1 text-center">
+        Tesla Model 3 Long Range
+      </h2>
+      <p class="text-slate-400 mb-6 text-sm text-center">
+        Your selected vehicle details are displayed below.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full text-center">
+        <div class="bg-slate-900 p-4 rounded-xl">
+          <i class="fa-solid fa-battery-full text-blue-500"></i>
+          <p class="text-slate-400 text-sm">Battery</p>
+          <p class="font-bold">75 kWh</p>
+        </div>
+
+        <div class="bg-slate-900 p-4 rounded-xl">
+          <i class="fa-solid fa-road text-blue-500"></i>
+          <p class="text-slate-400 text-sm">Range</p>
+          <p class="font-bold">358 miles</p>
+        </div>
+
+        <div class="bg-slate-900 p-4 rounded-xl">
+          <i class="fa-solid fa-plug text-blue-500"></i>
+          <p class="text-slate-400 text-sm">Port Type</p>
+          <p class="font-bold">CCS</p>
+        </div>
+
+        <div class="bg-slate-900 p-4 rounded-xl">
+          <i class="fa-solid fa-bolt text-blue-500"></i>
+          <p class="text-slate-400 text-sm">Max Charge</p>
+          <p class="font-bold">250 kW</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <button class="mt-6 bg-blue-600 hover:bg-blue-800 px-8 py-3 rounded-xl font-semibold">
+        Save Vehicle
+      </button>
+    </div>
+
+  </main>
+</div>
+
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('-translate-x-full');
+    document.getElementById('overlay').classList.toggle('hidden');
+  }
+</script>
+
+</body>
+</html>

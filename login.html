@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>EV-Route</title>
+  </head>
+
+  <body class="bg-[#0B1220] text-white min-h-screen">
+    <div class="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+      <div class="relative  lg:block">
+        <img src="/images/loginimage.jpg" alt="EV" class="h-full w-full object-cover" />
+
+        <div class="absolute bottom-10 left-10 max-w-md">
+          <h2 class="text-3xl font-bold mb-3">
+            Find Your Next Charge,<br />
+            Effortlessly
+          </h2>
+          <p class="text-gray-300">
+            Join a community of EV drivers finding the best charging stations.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center px-24">
+        <div class="w-full max-w-md">
+          <div class="flex items-center gap-2 mt-5">
+            <span class="text-blue-500 text-lg font-bold"></span>
+            <h1 class="text-xl font-semibold">ChargeFinder</h1>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-1">Welcome Back!</h2>
+          <p class="text-gray-400 text-sm mb-5">Log in to find your next charge</p>
+
+          <div class="mb-5">
+            <label class="block text-sm mb-2">Email or Username</label>
+            <input
+              type="email"
+              placeholder="you@example.com"
+              class="w-full rounded-lg bg-[#111827] border border-gray-700 px-4 py-2 focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          <div class="mb-3">
+            <div class="flex justify-between items-center mb-1">
+              <label class="text-sm">Password</label>
+              <a href="reset.html" class="text-blue-500 hover:underline text-sm">Forgot Password? </a>
+            </div>
+
+          
+
+            <div class="relative">
+              <input
+                type="password"
+                placeholder="Enter your password"
+                class="w-full rounded-lg bg-[#111827] border border-gray-700 px-4 py-2 pr-10 focus:outline-none focus:border-blue-500"
+              />
+              <span class="absolute right-3 top-3 text-gray-400 cursor-pointer">
+                👁️
+              </span>
+            </div>
+          </div>
+
+          <button
+            class="w-full bg-blue-500 hover:bg-blue-600 transition rounded-lg py-2 font-semibold mt-1"
+          >
+            Log In
+          </button>
+
+          <div class="flex items-center my-6 text-gray-500 text-sm">
+            <div class="flex-grow border-t border-gray-600"></div>
+            <span class="px-3">Or continue with</span>
+            <div class="flex-grow border-t border-gray-700"></div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <button
+              class="flex items-center justify-center gap-2 border border-gray-700 rounded-lg py-2 hover:bg-[#111827]"
+            >
+              <img
+                src="https://www.svgrepo.com/show/475656/google-color.svg"
+                class="w-5"
+              />
+              Google
+            </button>
+
+            <button
+              class="flex items-center justify-center gap-2 border border-gray-700 rounded-lg py-2 hover:bg-[#111827]"
+            >
+              <img
+                src="/images/OIP.webp"
+                class="w-5 "
+              />
+              Apple
+            </button>
+          </div>
+
+          <p class="text-center text-gray-400 text-sm mt-3">
+            Don't have an account?
+            <a href="#" class="text-blue-500 hover:underline">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
